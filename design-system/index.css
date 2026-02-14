@@ -1,0 +1,21 @@
+/**
+ * KodNest Premium Build System
+ * Single import for all design system assets.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+@import "tokens.css";
+@import "layout.css";
+@import "components.css";
+
+/* Base typography reset */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}

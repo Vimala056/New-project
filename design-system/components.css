@@ -1,0 +1,238 @@
+/**
+ * KodNest Premium Build System — Components
+ * Consistent, predictable, calm styling
+ */
+
+/* ─── Buttons ─── */
+.kodnest-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: var(--border-width) solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.kodnest-btn--primary {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.kodnest-btn--primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.kodnest-btn--primary:active {
+  background: var(--color-accent-active);
+  border-color: var(--color-accent-active);
+}
+
+.kodnest-btn--secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.kodnest-btn--secondary:hover {
+  border-color: var(--color-text-muted);
+  background: rgba(17, 17, 17, 0.04);
+}
+
+/* ─── Status Badge ─── */
+.kodnest-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: var(--border-width) solid var(--color-border);
+  background: white;
+}
+
+.kodnest-badge--not-started { color: var(--color-text-muted); }
+.kodnest-badge--in-progress { color: var(--color-warning); border-color: var(--color-warning); }
+.kodnest-badge--shipped { color: var(--color-success); border-color: var(--color-success); }
+
+/* ─── Cards ─── */
+.kodnest-card {
+  background: white;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  transition: border-color var(--transition);
+}
+
+.kodnest-card:focus-within {
+  border-color: var(--color-border-focus);
+}
+
+/* ─── Inputs ─── */
+.kodnest-input {
+  width: 100%;
+  height: var(--input-height);
+  padding: 0 var(--input-padding-x);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text-primary);
+  background: white;
+  border: var(--input-border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.kodnest-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.kodnest-input:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+.kodnest-input--error {
+  border-color: var(--color-accent);
+}
+
+/* Textarea */
+.kodnest-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: var(--space-2) var(--input-padding-x);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-text-primary);
+  background: white;
+  border: var(--input-border);
+  border-radius: var(--radius);
+  resize: vertical;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.kodnest-textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+/* ─── Prompt Box (copyable) ─── */
+.kodnest-prompt-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.kodnest-prompt-box__content {
+  font-family: ui-monospace, "Cascadia Code", "Monaco", monospace;
+  font-size: var(--text-small);
+  line-height: var(--leading-body);
+  padding: var(--space-2);
+  background: rgba(17, 17, 17, 0.04);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-primary);
+  overflow-x: auto;
+}
+
+.kodnest-prompt-box__actions {
+  display: flex;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* ─── Secondary Panel Content ─── */
+.kodnest-panel__step {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-text-secondary);
+}
+
+.kodnest-panel__title {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+
+/* ─── Checkbox (Proof Footer) ─── */
+.kodnest-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+}
+
+.kodnest-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.kodnest-checkbox input:checked + span {
+  color: var(--color-text-primary);
+}
+
+/* ─── Progress Indicator ─── */
+.kodnest-progress {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+/* ─── Error State ─── */
+.kodnest-error {
+  padding: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-accent);
+  background: rgba(139, 0, 0, 0.06);
+  border: var(--border-width) solid rgba(139, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.kodnest-error__title {
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+}
+
+.kodnest-error__fix {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Empty State ─── */
+.kodnest-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.kodnest-empty__message {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-3);
+  max-width: var(--text-max-width);
+}
